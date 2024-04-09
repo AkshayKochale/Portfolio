@@ -672,6 +672,11 @@ footer{
    {
       width: 100%;
    }
+
+   .row
+   {
+     width: 100%;
+   }
 }
 
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
@@ -756,6 +761,9 @@ footer{
       width: 100%;
    }
     
+   .project-box a{
+    display: none;
+   }
 
 }
 
@@ -810,5 +818,10 @@ footer{
    .footer
    {
       width: 100%;
+   }
+
+   .row
+   {
+     width: 100%;
    }
 }
