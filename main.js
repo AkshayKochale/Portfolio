@@ -57,7 +57,7 @@ sr.reveal('.featured-text-info',{delay: 200})
 sr.reveal('.featured-text-btn',{delay: 200})
 sr.reveal('.social_icons',{delay: 200})
 sr.reveal('.featured-image',{delay: 300})
-
+sr.reveal('.linktList',{delay:200})
 
 /* -- PROJECT BOX -- */
 sr.reveal('.project-box',{interval: 300})
@@ -76,20 +76,22 @@ const srLeft = ScrollReveal({
   reset: true
 })
 
+
+srLeft.reveal('.experience-box',{delay:200})
 srLeft.reveal('.about-info',{delay: 200})
 srLeft.reveal('.contact-info',{delay: 100})
 
 /* -- ABOUT SKILLS & FORM BOX -- */
 const srRight = ScrollReveal({
   origin: 'right',
-  distance: '80px',
+  distance: '150px',
   duration: 2000,
   reset: true
 })
 
 srRight.reveal('.skills-box',{delay: 100})
 srRight.reveal('.form-control',{delay: 100})
-
+srRight.reveal('.experience-box1',{delay:100})
 
 
 // SCROLL AND CHANGE CURRENT ACTIVE LINK
@@ -101,7 +103,7 @@ function setActiveLinkFromScroll() {
 
   sections.forEach(current =>{
     const sectionHeight = current.offsetHeight,
-        sectionTop = current.offsetTop - 50,
+        sectionTop = current.offsetTop - 100,
       sectionId = current.getAttribute('id')
 
     if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) { 
@@ -118,3 +120,18 @@ function setActiveLinkFromScroll() {
 
 // EVENT ADDED ON SCROLL -> CHECK SET /UNSET CURRENT ACTIVE MENU 
 window.addEventListener('scroll', setActiveLinkFromScroll)
+
+// DOWNLOAD RESUME
+
+function downloadResume()
+{
+    var link = document.createElement('a');
+    
+    link.href = './public/assets/AkshayKochale_Java_Resume.pdf';
+    link.download = 'AkshayKochaleResume.Pdf';
+    document.body.appendChild(link);
+    link.click();
+  
+    document.body.removeChild(link);
+
+}
