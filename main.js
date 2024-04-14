@@ -127,7 +127,7 @@ function downloadResume()
 {
     var link = document.createElement('a');
     
-    link.href = './public/assets/AkshayKochale_Java_Resume.pdf';
+    link.href = './public/assets/Akshayk_JavaReact.pdf';
     link.download = 'AkshayKochaleResume.Pdf';
     document.body.appendChild(link);
     link.click();
